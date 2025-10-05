@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recettes Cuisine — Détails</title>
+        <link rel="stylesheet" href="../style.css">
+        <style>
+            /* Page projet — Recettes Cuisine (même style premium que PFE) */
+            body.project-page{background:linear-gradient(180deg,#f7fafc 0%, #eef2ff 60%);color:var(--text,#0f1724);font-family:Inter,system-ui,Segoe UI,Roboto,Arial;margin:0;padding:28px}
+            .project-header{display:flex;align-items:center;gap:18px;margin-bottom:18px}
+            .back-btn{color:var(--muted,#475569);text-decoration:none;padding:8px 12px;border-radius:8px;border:1px solid rgba(15,23,36,0.06);background:transparent}
+            .project-hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:start}
+            @media(min-width:900px){.project-hero{grid-template-columns:1fr 420px}}
+            .hero-card{background:linear-gradient(180deg,rgba(124,58,237,0.06),transparent);padding:20px;border-radius:14px;box-shadow:0 8px 30px rgba(12,18,35,0.06)}
+            .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+            .tag{background:rgba(13,23,32,0.04);padding:6px 10px;border-radius:999px;font-weight:700;color:var(--muted,#475569)}
+            .video-wrap{margin-top:10px;border-radius:12px;overflow:hidden;box-shadow:0 12px 30px rgba(7,10,30,0.12);border:1px solid rgba(124,58,237,0.06)}
+            .video-wrap video{width:100%;height:auto;display:block}
+            .card{background:var(--card,#fff);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+            .section{margin-top:16px}
+            h2{margin:0 0 8px 0}
+            ul{margin:0;padding-left:18px;color:var(--muted,#475569)}
+            .project-actions{display:flex;gap:10px;margin-top:14px}
+            .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent,#6d28d9),#06b6d4);color:white;text-decoration:none;font-weight:700}
+            .secondary{background:transparent;color:var(--accent,#6d28d9);border:1px solid rgba(109,40,217,0.12);padding:10px 12px;border-radius:10px;text-decoration:none}
+            .fade-up{opacity:0;transform:translateY(8px);animation:fadeUp 560ms ease-out forwards}
+            @keyframes fadeUp{to{opacity:1;transform:none}}
+            @media(max-width:520px){body.project-page{padding:16px}}
+        </style>
+    </head>
+    <body class="project-page">
+        <header class="project-header fade-up">
+            <a href="../index.html" class="back-btn" aria-label="Retour au portfolio">← Retour</a>
+            <div>
+            <h1 style="margin:0">Recettes Cuisine — Application mobile</h1>
+            <div style="color:var(--muted,#475569);font-size:14px;margin-top:6px">Flutter • API Spoonacular • Recherche par ingrédients</div>
+            </div>
+        </header>
+
+        <main>
+            <section class="project-hero">
+                <article class="hero-card fade-up">
+                    <div>
+                        <p style="margin:0 0 6px 0;color:var(--muted,#475569)">Application mobile développée en <strong>Flutter</strong> permettant de rechercher des recettes selon les ingrédients disponibles. Intégration de l'API Spoonacular pour récupérer images, ingrédients et instructions. L'application propose aussi une gestion des favoris et une navigation fluide pour une bonne expérience utilisateur mobile.</p>
+
+                        <div class="tags" aria-hidden="true">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Spoonacular API</span>
+                            <span class="tag">Dart</span>
+                            <span class="tag">UX Mobile</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <a class="btn" href="https://github.com/aya-sahmi/recettes_cuisine" target="_blank" rel="noopener">Voir le code</a>
+                            <a class="secondary" href="../index.html">Retour au portfolio</a>
+                        </div>
+                    </div>
+
+                    <div class="section card" style="margin-top:14px">
+                        <h2>Objectifs du projet</h2>
+                        <ul>
+                            <li>Permettre la recherche de recettes par ingrédient disponible</li>
+                            <li>Fournir des instructions claires et illustrées pour chaque recette</li>
+                            <li>Offrir une expérience mobile fluide avec gestion des favoris</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <aside class="card fade-up" style="align-self:start">
+                    <h3 style="margin-top:0">Vidéo de démonstration</h3>
+                    <div class="video-wrap">
+                    <video controls playsinline preload="metadata" poster="../assets/images/recettes.png">
+                        <source src="../assets/videos/recettes_demo.mp4" type="video/mp4">
+                        Votre navigateur ne prend pas en charge la balise vidéo.
+                    </video>
+                    </div>
+                </aside>
+            </section>
+
+            <section class="card section fade-up">
+                <h2>Fonctionnalités clés</h2>
+                <ul>
+                    <li>Recherche intelligente par ingrédients (matching et suggestions)</li>
+                    <li>Affichage des étapes de préparation, temps et ingrédients nécessaires</li>
+                    <li>Favoris sauvegardés localement pour accès hors‑ligne</li>
+                    <li>Pagination / lazy loading des résultats pour performance</li>
+                </ul>
+            </section>
+
+            <section class="card section fade-up">
+                <h2>Détails techniques & bonnes pratiques</h2>
+                <ul>
+                    <li>Gestion des requêtes à l'API Spoonacular avec cache et gestion d'erreurs</li>
+                    <li>Architecture modulaire Flutter (Widgets réutilisables, services)</li>
+                    <li>Tests via flutter_test pour les composants critiques</li>
+                    <li>Optimisation des images et lazy loading pour réduire la consommation mobile</li>
+                </ul>
+            </section>
+        </main>
+
+        <script>
+            document.querySelectorAll('.fade-up').forEach((el,i)=>{ el.style.animationDelay = (i*90)+'ms'; });
+        </script>
+    </body>
+</html>

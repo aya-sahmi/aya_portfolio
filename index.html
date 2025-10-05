@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sahmi Lamrani Aya — Portfolio</title>
+    <meta name="description" content="Portfolio de Sahmi Lamrani Aya — Développeuse Full‑Stack. Projets, compétences, expérience et contact." />
+    <link rel="icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root{
+        --bg:#f7fafc; --card:#ffffff; --muted:#475569; --accent:#6d28d9; --glass: rgba(13, 23, 32, 0.03); --text:#0f1724; --radius:12px;
+        }
+        [data-theme="dark"]{ --bg:#0b1220; --card:#071026; --muted:#9ca3af; --accent:#7c3aed; --glass: rgba(255,255,255,0.03); --text:#e6eef8 }
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{margin:0;padding:28px;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,var(--bg),#eef2ff);color:var(--text);-webkit-font-smoothing:antialiased}
+        .container{max-width:1100px;margin:0 auto}
+        header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+        .brand{display:flex;align-items:center;gap:12px}
+        .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+        nav ul{display:flex;gap:12px;list-style:none;padding:0;margin:0}
+        nav a{color:var(--muted);text-decoration:none}
+        nav a:hover{color:var(--text)}
+        .btn{display:inline-block;padding:8px 12px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#06b6d4);color:white;text-decoration:none;font-weight:700}
+        .hero{margin-top:18px;display:grid;grid-template-columns:1fr;gap:18px}
+        .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+        .hero-grid{display:grid;gap:14px}
+        @media(min-width:880px){.hero{grid-template-columns:1fr 360px}.hero-grid{grid-template-columns:1fr}}
+        .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+        .chip{padding:6px 10px;border-radius:999px;background:var(--glass);font-weight:600;color:var(--muted)}
+        .projects-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
+        @media(min-width:720px){.projects-grid{grid-template-columns:repeat(2,1fr)}}
+        .project-card{display:flex;flex-direction:column;gap:10px}
+        .project-card img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+        .project-meta{display:flex;justify-content:space-between;align-items:center}
+        footer{text-align:center;color:var(--muted);margin-top:18px}
+        /* small forms */
+        input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(15,23,36,0.06);background:transparent;color:inherit}
+        .projects-actions{display:flex;gap:8px}
+        .secondary{background:transparent;color:var(--accent);border:1px solid rgba(109,40,217,0.12);padding:8px 10px;border-radius:8px;text-decoration:none}
+        /* accessibility focus */
+        a:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(124,58,237,0.18);outline-offset:3px}
+        /* small responsive */
+        @media(max-width:420px){body{padding:16px}.logo{width:48px;height:48px}}
+    </style>
+    </head>
+    <body data-theme="light">
+    <div class="container">
+        <header>
+        <div class="brand">
+            <div class="logo" aria-hidden="true">AL</div>
+            <div>
+            <div style="font-weight:800">Sahmi Lamrani Aya</div>
+            <div style="color:var(--muted);font-size:13px">Développeuse Full‑Stack</div>
+            </div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:12px">
+            <nav aria-label="Navigation principale">
+            <ul>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            </nav>
+
+            <button id="theme-toggle" aria-label="Changer le thème" style="padding:8px;border-radius:8px;border:1px solid rgba(15,23,36,0.06);background:transparent">🌓</button>
+            <a class="btn" href="assets/Sahmi_Lamrani_Aya_CV.pdf" download>Télécharger CV</a>
+        </div>
+        </header>
+
+        <main>
+        <section class="hero" aria-labelledby="intro-heading">
+            <div class="card hero-grid">
+            <div>
+                <h1 id="intro-heading" style="margin:0;font-size:28px">Je suis <span style="color:var(--accent)">Aya</span> — développeuse Full‑Stack</h1>
+                <p style="color:var(--muted);margin-top:8px">Développeuse Full Stack diplômée d’une Licence en développement logiciel et d’un DTS en
+développement Full Stack. Compétences solides en Laravel, React, Node.js, Flutter, MySQL, MongoDB.
+Expérimentée en API REST, UX/UI Design et méthodes Agiles. Passionnée par l’innovation, motivée à
+contribuer à des projets digitaux performants</p>
+
+                <div class="skills" aria-label="Compétences principales">
+                <span class="chip">ReactJS</span>
+                <span class="chip">Laravel</span>
+                <span class="chip">ExpressJS</span>
+                <span class="chip">Flutter</span>
+                <span class="chip">Supabase</span>
+                <span class="chip">TailwindCSS</span>
+                <span class="chip">MongoDB</span>
+                <span class="chip">MySQL</span>
+                <span class="chip">Bootstrap</span>
+                <span class="chip">TypeScript</span>
+                </div>
+
+                <div style="margin-top:12px">
+                <a class="btn" href="#projects">Voir mes projets</a>
+                <a class="secondary" href="#contact" style="margin-left:8px">Me contacter</a>
+                </div>
+            </div>
+
+            <aside style="padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(109,40,217,0.06),transparent);align-self:start">
+                <h4 style="margin:0 0 8px 0">Résumé</h4>
+                <p style="margin:0;color:var(--muted)"><strong>Diplômes:</strong> DTS Dév. Full Stack (ISGI - OFPPT) && Licence Dév. Logiciel (Mundiapolis)</p>
+                <p style="margin-top:8px;color:var(--muted)"><strong>Localisation:</strong> Ancienne Médina, Casablanca, Maroc</p>
+                <p style="margin-top:8px;color:var(--muted)"><strong>Contact:</strong> <a href="mailto:ayasahmilam@gmail.com">ayasahmilam@gmail.com</a></p>
+            </aside>
+            </div>
+
+            <div class="card" style="padding:14px">
+                <h3 style="margin-top:0">Compétences techniques</h3>
+                <div style="display:flex;flex-wrap:wrap;gap:8px">
+                    <span class="chip">HTML & CSS</span>
+                    <span class="chip">JavaScript</span>
+                    <span class="chip">React</span>
+                    <span class="chip">Node.js</span>
+                    <span class="chip">Laravel</span>
+                    <span class="chip">Flutter</span>
+                    <span class="chip">PostgreSQL / MySQL</span>
+                </div>
+                <br>
+                <h3 style="margin-top:0">Compétences comportementales</h3>
+                <div style="display:flex;flex-wrap:wrap;gap:8px">
+                    <span class="chip">Gestion de stress</span>
+                    <span class="chip">Autonomie</span>
+                    <span class="chip">Persévérance</span>
+                    <span class="chip">Esprit d'équipe</span>
+                    <span class="chip">Adaptabilité</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" style="margin-top:18px">
+            <h2>Projets récents</h2>
+            <p style="color:var(--muted)">Sélection de projets personnels et académiques. Clique sur "Détails" pour lire la page complète.</p>
+
+            <div class="projects-grid" id="projects-list">
+            <!-- Project 1: express-react-csrf-protection -->
+            <article class="card project-card">
+                <img src="assets/images/csrf.png" alt="Express + React CSRF protection" onerror="this.style.display='none'">
+                <div>
+                <div class="project-meta">
+                    <h3 style="margin:0">express-react-csrf-protection</h3>
+                    <div style="color:var(--muted);font-size:13px">Node.js • Express • React</div>
+                </div>
+                <p style="color:var(--muted);margin-top:8px">Projet démontrant l'intégration de la protection CSRF entre un backend Express et un frontend React. Gestion des tokens CSRF pour sécuriser les requêtes.</p>
+                <div class="projects-actions">
+                    <a class="btn" href="https://github.com/aya-sahmi/express-react-csrf-protection" target="_blank" rel="noopener">Voir sur GitHub</a>
+                    <a class="secondary" href="projects/express-react-csrf-protection.html">Détails</a>
+                </div>
+                </div>
+            </article>
+
+            <!-- Project 2: recettes_cuisine -->
+            <article class="card project-card">
+                <img src="assets/images/recettes.png" alt="Recettes Cuisine app" onerror="this.style.display='none'">
+                <div>
+                <div class="project-meta">
+                    <h3 style="margin:0">recettes_cuisine</h3>
+                    <div style="color:var(--muted);font-size:13px">Flutter • API Spoonacular</div>
+                </div>
+                <p style="color:var(--muted);margin-top:8px">Application Flutter permettant de rechercher des recettes par ingrédients. Intégration de l'API Spoonacular et gestion des favoris.</p>
+                <div class="projects-actions">
+                    <a class="btn" href="https://github.com/aya-sahmi/recettes_cuisine" target="_blank" rel="noopener">Voir sur GitHub</a>
+                    <a class="secondary" href="projects/recettes_cuisine.html">Détails</a>
+                </div>
+                </div>
+            </article>
+
+            <!-- Project 3: Gestion_De_Cours -->
+            <article class="card project-card">
+                <img src="assets/images/cours.png" alt="Gestion De Cours" onerror="this.style.display='none'">
+                <div>
+                <div class="project-meta">
+                    <h3 style="margin:0">Gestion_De_Cours</h3>
+                    <div style="color:var(--muted);font-size:13px">Laravel • MySQL</div>
+                </div>
+                <p style="color:var(--muted);margin-top:8px">Gestion de cours en ligne: plateforme Laravel permettant aux professeurs d'ajouter des cours avec vidéos et descriptions détaillées.</p>
+                <div class="projects-actions">
+                    <a class="btn" href="https://github.com/aya-sahmi/Gestion_De_Cours" target="_blank" rel="noopener">Voir sur GitHub</a>
+                    <a class="secondary" href="projects/gestion_de_cours.html">Détails</a>
+                </div>
+                </div>
+            </article>
+
+            <!-- Project 4: Projet_PFE -->
+            <article class="card project-card">
+                <img src="assets/images/pfe.png" alt="Projet PFE - Merchandising" onerror="this.style.display='none'">
+                <div>
+                <div class="project-meta">
+                    <h3 style="margin:0">Projet_PFE</h3>
+                    <div style="color:var(--muted);font-size:13px">Laravel • API • Merchandising</div>
+                </div>
+                <p style="color:var(--muted);margin-top:8px">Application de Merchandising — développement du backend: gestion des produits, synchronisation des stocks et gestion des points de vente.</p>
+                <div class="projects-actions">
+                    <a class="btn" href="https://github.com/aya-sahmi/Projet_PFE" target="_blank" rel="noopener">Voir sur GitHub</a>
+                    <a class="secondary" href="projects/projet_pfe.html">Détails</a>
+                </div>
+                </div>
+            </article>
+            </div>
+        </section>
+
+        <section id="experience" style="margin-top:20px">
+            <div class="card">
+            <h3>Expérience & Réalisations</h3>
+            <ul style="color:var(--muted)">
+                <li>Stage chez Tython — Contribution à Tybot (auth multi‑rôles, gestion customers, broadcasts, tokens)</li>
+                <li>Projets académiques : Gestion de cours, application de merchandising (PFE), application mobile de recettes.</li>
+            </ul>
+            </div>
+        </section>
+
+        <section id="contact" style="margin-top:18px;display:grid;grid-template-columns:1fr;gap:12px">
+            <div class="card">
+            <h3>Contact</h3>
+            <form id="contact-form">
+                <label class="muted" for="name">Nom</label>
+                <input id="name" name="name" required />
+
+                <label class="muted" for="email" style="margin-top:8px;display:block">Email</label>
+                <input id="email" name="email" type="email" required />
+
+                <label class="muted" for="message" style="margin-top:8px;display:block">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <div style="margin-top:10px;display:flex;gap:8px">
+                    <button type="submit" class="btn">Envoyer</button>
+                    <button type="reset" class="secondary">Effacer</button>
+                </div>
+
+                <small id="contact-feedback" style="display:block;margin-top:8px;color:var(--muted)"></small>
+            </form>
+
+            <!-- Script EmailJS -->
+            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+            <script>
+            (function() {
+                emailjs.init("VkDJF4PGfy8Xp3dr2"); // 🟣 remplace par ta clé publique EmailJS
+            })();
+
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const btn = document.querySelector('.btn');
+                const feedback = document.getElementById('contact-feedback');
+                btn.disabled = true;
+                feedback.textContent = "Envoi en cours...";
+
+                emailjs.sendForm("service_2tiyqrx", "template_zdfy6jd", this)
+                .then(() => {
+                    feedback.textContent = "✅ Message envoyé avec succès ! Merci pour ton contact.";
+                    this.reset();
+                    btn.disabled = false;
+                })
+                .catch((error) => {
+                    feedback.textContent = "❌ Une erreur est survenue, réessaie plus tard.";
+                    console.error("Erreur EmailJS:", error);
+                    btn.disabled = false;
+                });
+            });
+            </script>
+            </div>
+
+            <div class="card">
+            <h4>Réseaux</h4>
+            <p style="color:var(--muted)">GitHub: <a href="https://github.com/aya-sahmi">github.com/aya-sahmi</a></p>
+            <p style="color:var(--muted)">LinkedIn: <a href="https://www.linkedin.com/in/aya-sahmi-lamrani-18b2bb353/">Aya Sahmi Lamrani</a></p>
+            <p style="color:var(--muted)">Téléphone: 0619104637</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© <span id="year"></span> Sahmi Lamrani Aya — Développée avec ❤️. Déployable sur GitHub Pages.</p>
+        </footer>
+        </main>
+    </div>
+
+    <script>
+        // Theme toggle (light-first, with saved preference)
+        const root = document.documentElement;
+        const body = document.body;
+        const btn = document.getElementById('theme-toggle');
+        const saved = localStorage.getItem('theme');
+        if(saved) body.setAttribute('data-theme', saved);
+        function toggleTheme(){
+        const current = body.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+        const next = current === 'dark' ? 'light' : 'dark';
+        body.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        }
+        btn.addEventListener('click', toggleTheme);
+
+        // Contact form opens mailto
+        document.getElementById('contact-form').addEventListener('submit', ()=>{
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const fb = document.getElementById('contact-feedback');
+        if(!name||!email||!message){ fb.textContent='Merci de compléter tous les champs.'; return false; }
+        const subject = encodeURIComponent('Contact portfolio: '+name);
+        const body = encodeURIComponent(`Nom: ${name}
+    Email: ${email}
+
+    ${message}`);
+        window.location.href = `mailto:ayasahmilam@gmail.com?subject=${subject}&body=${body}`;
+        fb.textContent = 'Ton client email va s\'ouvrir pour envoyer le message.';
+        return false;
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    </body>
+</html>
